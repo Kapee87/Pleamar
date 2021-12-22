@@ -1,0 +1,36 @@
+/* Configuraciones generales/universales */
+
+*   {
+    box-sizing: border-box;
+    margin: 0;
+    }
+
+/* Configuracion del nav */
+#nav-bar .logo img, #nav-bar .logo{
+    max-width: 200px;
+    min-width: 45%;
+    max-height: 100px;
+}
+
+#nav-bar .nav-menu .nav-ul {
+    display: none;
+}
+#nav-bar{
+    display: flex;
+}
+.drop-down-menu {
+    background-color: aquamarine;
+    height: 90vh;
+    display: grid;
+}
+ .hidden {
+    display: none;
+}
+.show {
+    display: grid;
+}
+
+/* Configuraciones Footer */
+#footer {
+    display: none;
+}
