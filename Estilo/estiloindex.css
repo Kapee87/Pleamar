@@ -3,7 +3,9 @@
 *   {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     }
+
 
 /* Configuracion del nav */
 #nav-bar .logo img, #nav-bar .logo{
@@ -11,7 +13,6 @@
     min-width: 45%;
     max-height: 100px;
 }
-
 #nav-bar .nav-menu .nav-ul {
     display: none;
 }
@@ -19,9 +20,9 @@
     display: flex;
 }
 .drop-down-menu {
-    background-color: aquamarine;
-    height: 90vh;
-    display: grid;
+    height: 80vh;
+    display: flex;
+    width: 100vw;
 }
  .hidden {
     display: none;
@@ -29,7 +30,20 @@
 .show {
     display: grid;
 }
-
+.drop-down-menu .nav .nav-ul{
+    display: flex;
+    flex-direction: column;
+}
+.drop-down-menu .nav .nav-ul a, .drop-down-menu .nav .nav-ul .li-nav{
+    text-decoration: none;
+    list-style-type: none;
+    color:#20625A;
+    line-height: 3rem;
+}
+.drop-down-menu .nav .nav-ul .li-nav{
+    box-shadow: 1px 1px 5px #000;
+    padding-left: 30px;
+}
 /* Configuraciones Footer */
 #footer {
     display: none;
