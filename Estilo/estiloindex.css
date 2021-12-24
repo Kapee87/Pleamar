@@ -9,20 +9,21 @@
 
 
 /* Configuracion del nav */
-#nav-bar .logo img, #nav-bar .logo{
-    max-width: 200px;
-    min-width: 45%;
-    max-height: 100px;
+#nav-bar a .logo img, #nav-bar a .logo{
+    max-width: 150px;
+    min-width: 25%;
+    max-height: 60px;
     background-color: transparent;
+    padding-top: 3px;
 }
+
 #nav-bar .nav-menu .nav-ul {
     display: none;
 }
 #nav-bar{
     display: flex;
     justify-content: space-around;
-    background-image: url(https://gifer.com/en/ZlXh);
-    background-size: cover;
+    
 }
 
 .drop-down-menu {
@@ -35,6 +36,9 @@
 }
 .show {
     display: grid;
+}
+.drop-down-menu.hidden .nav .nav-ul img{
+    display: none;
 }
 .drop-down-menu .nav .nav-ul{
     display: flex;
@@ -53,12 +57,13 @@
 
 /* Confugracion seccion Main */
 #main .main-back{
-    background-image: url(../imagenes/Cat-eye.jpg);
+    background-image: url(../imagenes/pareja-removebg-preview.png);
     background-size:cover;
     background-repeat: no-repeat;
     width: 100%;
     max-height: 325px;
-    max-width: 560px;
+  
+    min-height: 320px;
     /* display: none; */
 }
 #main .transparencia{
@@ -68,6 +73,7 @@
     opacity: 0.4;
     border-top: 3px ridge #20625A;
      max-height: 325px;
+     min-height: 320px;
 }
 #main .main-text-container .main-title, #main .main-text {
     text-shadow: 6px -6px 6px #47817ab2;
@@ -75,8 +81,9 @@
   padding-bottom: 20px;
 }
 #main .main-text-container .main-title{
-    font-size: 2.9rem;
+    font-size: 2.5rem;
     width: 400px;   
+    font-family: 'Original Surfer', cursive;
 }
 #main .main-text-container .main-text{
     font-size: 1rem;
@@ -92,7 +99,7 @@
   z-index: 100;
     display: flex;
     flex-direction: column;
-    gap: 7rem;
+    gap: 6rem;
 }
 /* Seccion sobre nosotros */
 #about .about-back{
@@ -133,11 +140,14 @@ font-family: 'Original Surfer', cursive;
     margin-top: 10px;
 }
 #location iframe {
-margin-top: 3px;
+margin-top: 10px;
+box-shadow: 1px -3px 5px #000;
+width: 100%;
 }
 #location .location-title{
     text-align: right;
     font-family: 'Original Surfer', cursive;
+    padding-right: 25px;
 }
 /* Seccion clases */
 #clases{
@@ -181,6 +191,7 @@ margin-top: 3px;
     padding-right: 5px;
     padding-left: 10px;
     display: flex;
+    justify-content: center;
     list-style-type: none;
 }
 #footer .footer-ul a{
@@ -194,4 +205,112 @@ margin-top: 3px;
 #footer .footer-ul img{
     width: 20px;
     justify-self: center;
+}
+
+    /* media queries */
+@media screen and (min-width:321px) and (max-width:768px){
+    #nav-bar {
+        padding-right: 10%;
+    }
+    #main .main-back .transparencia, #main .main-back {
+        width: 100vw;
+    }
+   #main .main-back{
+       background-image: url(../imagenes/pareja-removebg-preview.png);
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-color: rgba(22, 202, 172, 0.247);
+   }
+    #main .main-text-container{
+        width: 90%;
+    }
+    #main .main-text-container .main-title {
+        font-size: 2rem;   
+    }
+    #main .main-text-container .main-text{
+        width: 100vw;
+        font-size: 90%;
+        padding-top: 40px;
+        padding-right: 50px;
+        text-shadow: 1px -3px 5px rgb(255, 255, 255);
+    }
+}
+@media screen and (min-width:510px){
+    .hidden{
+        display: flex;
+        flex-direction: row;
+    }
+    #nav-bar button{
+        display: none;
+    }
+    .drop-down-menu{
+        max-width: 100vw;
+        display: flex;
+        justify-content: center;
+        gap: 0;
+    }
+    
+    .drop-down-menu.hidden nav .nav-ul{
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        width: fit-content;
+    }
+    .drop-down-menu.hidden .nav .nav-ul .li-nav {
+        width: 150px;
+        height: 100px;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        border-bottom: rgba(32, 178, 171, 0) solid 3px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    .drop-down-menu.hidden .nav .nav-ul .li-nav:hover{
+        text-shadow: 1px -2px 5px lightseagreen;
+        border-bottom: lightseagreen solid 3px;
+    }
+    .drop-down-menu.hidden .nav .nav-ul .li-nav:hover img{
+        transform: scale(120%);
+    }
+    .drop-down-menu.hidden .nav .nav-ul .li-nav a, .drop-down-menu.hidden .nav .nav-ul .li-nav img{
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        gap: 0;
+        line-height: 2;
+    }
+    
+    .drop-down-menu.hidden .nav .nav-ul .li-nav .ico-home, .drop-down-menu.hidden .nav .nav-ul .li-nav .ico-about, .drop-down-menu.hidden .nav .nav-ul .li-nav .ico-location{
+        width: 30%;
+        height: 50%;
+    }
+     .drop-down-menu.hidden .nav .nav-ul .li-nav .ico-clases{
+         width:30%;
+         height: 60%;
+         margin-bottom: -12px;
+
+     }
+   
+    .drop-down-menu.hidden .nav .nav-ul .li-nav .ico-contacto
+    {
+        width:30px;
+        height: 35px;
+        margin-top: 13px;
+    }
+}
+
+@media (min-width:768px){
+    #main{
+        width: 100vh;
+    }
+#main .main-back{
+       background-image: url(../imagenes/pareja-removebg-preview.png);
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-color: rgba(22, 202, 172, 0.247);
+   }
 }
