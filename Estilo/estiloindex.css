@@ -9,6 +9,7 @@
 
 
 /* Configuracion del nav */
+
 #nav-bar a .logo img, #nav-bar a .logo{
     max-width: 150px;
     min-width: 25%;
@@ -24,12 +25,14 @@
     display: flex;
     justify-content: space-around;
     
+    
 }
 
 .drop-down-menu {
     height:fit-content;
     display: flex;
     width: 100vw;
+    
 }
  .hidden {
     display: none;
