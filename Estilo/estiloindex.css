@@ -6,7 +6,9 @@
     padding: 0;
   font-family:fantasy;
     }
-
+body{
+     background-color: #09acf76c;
+}
 
 /* Configuracion del nav */
 
@@ -106,7 +108,11 @@
     flex-direction: column;
     gap: 6rem;
 }
+
 /* Seccion sobre nosotros */
+#about{
+    margin-bottom: 5px;
+}
 #about .about-back{
     background-color: #09acf76c;
     background-image: url(https://i.gifer.com/2i0K.gif);
@@ -143,6 +149,7 @@
     text-shadow:2px 2px #061ef386;
     font-weight: 600;
     background-color: #09acf76c;
+    padding-bottom: 20px;
 }
 #about .about-title{
     padding-top: 10px;
@@ -168,19 +175,30 @@ text-shadow:3px 2px 4px rgb(6, 189, 235);
 }
 
 /* Seccion location */
+#location{
+    margin-top: -3.3px;
+    border:none;
+   
+}
+/* animacion */
 
+@keyframes cambiar {
+0% {background-position: left;}
+100% {background-position: right;}    
+}
 #location iframe {
-
+margin-top: 33px;
 box-shadow: 1px -3px 5px #000;
 width: 100%;
+height: 60vh;
 }
-#location .location-title{
+body .up-button-back .location-title{
     text-align: right;
     font-family: 'Original Surfer', cursive;
-    padding-right: 25px;
-     background-color: #09acf76c;
+   left: 30px;
+   position: absolute;
     line-height: 4rem;
-    
+
 }
 /* Seccion clases */
 #clases{
@@ -188,26 +206,32 @@ width: 100%;
     padding-left: 10px;
   background-color: #09acf76c;
   margin-bottom: -12px;
+  padding-top: 20px;
 }
 #clases .clases-title{
     font-family: 'Original Surfer', cursive;
 }
 #clases .clases-title{
     font-size: 2rem;
-    color:#0753f8d8;
-    text-shadow: 2px -2px 4px rgb(34, 34, 34);
+    color:rgba(5, 5, 5, 0.986);
+    text-shadow: 2px -2px 4px #0753f8d8;
 }
 #clases .clases-text{
     font-size: 0.8rem;
-    color: rgba(5, 5, 5, 0.986);
-    text-shadow:1px -2px 4px #1a1a1a31;
+   color:rgba(5, 5, 5, 0.986);
+    text-shadow: 2px -2px 4px #0753f8d8;
+    margin-top: 20px;
 }
 #clases .clases-sub {
     padding-top: 10px;
     font-size: 1.8rem;
+    color: #0753f8d8;
+    text-shadow: 3px -3px 4px #010202f3;
 }
 #clases strong{
     font-size: 1.1rem;
+    color: #0753f8d8;
+    
 }
 
 /* Configuraciones Footer */
@@ -248,6 +272,31 @@ width: 100%;
 #footer .footer-ul img{
     width: 20px;
     justify-self: center;
+}
+
+/* Boton up */
+body .up-button {
+    left: 90vw;
+    width:7,5vw;
+    height: 8vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top:200px;
+    opacity: 0.7; 
+}
+
+body .up-button-back{
+    background-color: #09acf76c;
+    width: 100%;
+    height: 12%;
+    min-height: 64px;
+    position: absolute;
+    border: none;
+background: linear-gradient(45deg, rgb(46, 46, 214), rgb(27, 230, 245), rgba(75, 73, 73, 0.37), #e7c799);
+      background-size: 400% 400%;
+    animation: cambiar 5s ease-in-out infinite alternate;
+   box-shadow: 3px -5px 10px black;
+
 }
 
     /* media queries */
@@ -363,7 +412,20 @@ height:20vh;
 #main .main-back{
        background-image: url(../imagenes/pareja-removebg-preview.png);
        background-repeat: no-repeat;
-       background-size: cover;
+       background-size: contain;
        background-color: rgba(22, 202, 172, 0.247);
    }
+   #main .main-text, #main .main-title{
+   width: 100vw;
+   }
+   #main .main-text-container{
+       width: 100vw;
+       align-items: flex-end;   
+   }
+   #clases div, #clases h2, #clases strong, #clases p{
+    width: 700px;
+    text-align: center;
+    display: inline-block;
 }
+}
+
