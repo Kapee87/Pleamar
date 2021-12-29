@@ -7,7 +7,7 @@
   font-family:fantasy;
     }
 body{
-     background-color: #09acf76c;
+     background:var(--fon-color-gradient);
 }
 :root{
     --fon-color-gradient:linear-gradient(45deg, #09acf7d8, #81d2f8e3);
@@ -117,9 +117,10 @@ background:var(--fon-color-gradient);
 /* Seccion sobre nosotros */
 #about{
     margin-bottom: 5px;
+     background:var(--fon-color-gradient);
 }
 #about .about-back{
-    background-color: #09acf76c;
+    background-color: transparent;
     background-image: url(https://i.gifer.com/2i0K.gif);
     background-size: cover;
 }
@@ -191,6 +192,7 @@ margin-top: 33px;
 box-shadow: 1px -3px 5px #000;
 width: 100%;
 height: 60vh;
+z-index: 50;
 }
 body .up-button-back .location-title{
     text-align: right;
@@ -268,6 +270,7 @@ body .up-button-back .location-title{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    color: initial;
 }
 #footer .footer-ul img{
     width: 20px;
@@ -283,15 +286,15 @@ body .up-button {
     position: sticky;
     top:200px;
     opacity: 0.7; 
+    z-index: 100;
 }
 
 body .up-button-back{
-    background-color: #09acf76c;
+    background-color: transparent;
     width: 100%;
-    height: 20%;
+    height: 12%;
     margin-top: -5px;
-    min-height: 64px;
-    max-height: 115px;
+    min-height: 75px;
     position: absolute;
    background-image: url(../imagenes/vanfond-removebg-preview.png);
    background-size: contain;
@@ -299,6 +302,8 @@ body .up-button-back{
    animation: cambiar 10s ease-in-out alternate-reverse infinite;
    opacity: 0.8;    
 }
+
+
 /* animacion */
 
 @keyframes cambiar {
@@ -310,7 +315,11 @@ body .up-button-back{
        top: 100px;
        line-height: 10rem;
    }
+
+
+
     /* media queries */
+
 @media screen and (min-width:321px) and (max-width:768px){
     #nav-bar {
         padding-right: 10%;
@@ -339,7 +348,7 @@ body .up-button-back{
   color:#2e97c7fd;
     }
     #footer .footer-back{
-        background-position: 0px -175px;
+        background-position: 0px -115px;
     }
 }
 @media screen and (min-width:510px){
@@ -417,6 +426,10 @@ background-color: #09acf786;
 width:100%;
 height:20vh;
     }
+    
+    #footer .footer-ul{
+        flex-direction: column;
+    }
 }
 
 @media screen and (min-width:768px){
@@ -444,6 +457,24 @@ height:20vh;
   #footer .footer-back{
       background-position: 0px -175px;
   }
+ #footer .footer-ul{
+     flex-direction: row;
+ }
+ #footer .footer-title{
+     font-size: 3rem;
+ }
+ #footer .footer-back .footer-ul .li-footer a{
+     font-size: 1.8rem;
+     width: 160px;
+    
+     
+ }
+     /* #footer .ico-foot, #footer .footer-ul .li.footer a{
+        width: 2em;
+        height: 2em;
+        
+    } */
+
 }
 
 @media screen and (min-width:1024px){
@@ -455,4 +486,8 @@ height:20vh;
         color:#000;
         font-size: 1.5em;
    }
+  
+}
+@media screen and (min-width:1500px){
+   
 }
