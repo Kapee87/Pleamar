@@ -254,7 +254,7 @@ body .up-button-back {
 }
 .location-title{
     position:absolute;
-    top:258vh;
+    top:260vh;
     width: 100%;
     animation: mover 1s ease-in-out alternate infinite;
     color:var(--main-color);
@@ -355,7 +355,7 @@ width:600px;
 }
 /* Responsive */
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:426px) {
     header, header .drop-down-menu nav .nav-ul{
         background-color:rgba(240, 131, 7, 0.1);
     }
@@ -365,12 +365,48 @@ width:600px;
                
     }
     #main{
+        background: url(../imagenes/10-años.png);
    background-size: 90%;
    background-repeat: no-repeat;
    background-position: center;
-   animation: mover 2s  alternate-reverse infinite;
+   
     }
+    #main .main-text{
+        font-size: 180%;
+        animation: mover 5s  alternate-reverse infinite;
+        /* Puede quitarse la animación anterior para promover mejor lectura */
+    }
+     #about .about-back .about-text {
+        font-size: 1rem;
+    }
+    #about .about-back .about-title{
+        
+    }
+    /* #location .location-title{
+        top:280vh;
+    }
+    #clases{
+        height: 210vmax;
+    }
+    #footer .footer-title{
+     padding: 10px;
+    } */
+}
 
-    
-    
+@media screen and (max-width:768px){
+    #about .about-back .about-text {
+        font-size: 100%;
+    }
+    #about .about-back .about-title{
+        font-size: 190%;
+    }
+    #location .location-title{
+        top:280vh;
+    }
+    #clases{
+        height: 210vmax;
+    }
+    #footer .footer-title{
+     padding: 10px;
+    }
 }
