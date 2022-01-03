@@ -9,6 +9,7 @@
 }
 body{
     background-color:var(--nav-color);
+    font-family:Georgia, 'Times New Roman', Times, serif;
     
 }
 :root{
@@ -109,12 +110,12 @@ body header .show {
         text-decoration: none;
         color: var(--main-color);
         font-weight: bolder;
-        font-size: 1.4em;
+        font-size: 2em;
         text-shadow: 1px 1px 5px #fff;
     }
 
     header .drop-down-menu nav .nav-ul .li-nav a:hover{
-        animation: rotar 2s ease alternate infinite;
+        /* animation: rotar 2s ease alternate; */
     }
     header .drop-down-menu nav .nav-ul .li-nav img{
         width: 40px;
@@ -258,7 +259,8 @@ body .up-button-back {
     width: 100%;
     animation: mover 1s ease-in-out alternate infinite;
     color:var(--main-color);
-   
+   font-family: 'Vujahday Script', cursive;
+   font-size: 2.8rem;
 }
 /* Seccion clases */
 #clases{
@@ -268,6 +270,7 @@ body .up-button-back {
     background-attachment: fixed;   
     width: 100%;
     height: 148vh;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 #clases .clases-back{
    
@@ -289,17 +292,20 @@ body .up-button-back {
     font-size: 4rem;
     animation: moverB 5s ease-out alternate infinite;
     text-shadow: 1px -1px 5px rgb(153, 247, 242);
+    font-family: 'Vujahday Script', cursive;
 }
 #clases .text-block .clases-sub{
     font-size: 3.1rem;
     animation: moverB 5s ease-out alternate infinite;
     text-shadow: 1px -1px 5px rgb(153, 247, 242);
+    font-family: 'Vujahday Script', cursive;
 }
 #clases .text-block strong{
     font-size: 2rem;
     animation: moverB 5s ease-out alternate infinite;
 text-shadow: 1px -1px 5px rgb(153, 247, 242);
 width:600px;
+
 }
 #clases .text-block .clases-text{
     font-size: 1.2rem;
@@ -353,11 +359,18 @@ width:600px;
     width: 15%;
     justify-self: center;
 }
+#footer .footer-ul a:hover{
+    animation: mover 0.2s ease-in-out infinite;
+}
 /* Responsive */
 
 @media screen and (max-width:426px) {
+   
     header, header .drop-down-menu nav .nav-ul{
         background-color:rgba(240, 131, 7, 0.1);
+    }
+    .drop-down-menu nav .nav-ul .li-nav a{
+        font-size: 1em;
     }
     .welcome .welcome-fondo {
         background:url(../imagenes/toninasshort.jpg);
@@ -377,31 +390,75 @@ width:600px;
         /* Puede quitarse la animación anterior para promover mejor lectura */
     }
      #about .about-back .about-text {
-        font-size: 1rem;
+        font-size: 68%;
+        line-height: 1;    
     }
     #about .about-back .about-title{
-        
+        font-size: 200%;
+        line-height: 0;
     }
-    /* #location .location-title{
+    body .up-button-back{
+        height: 19%;
+    }
+    #location .location-title{
         top:280vh;
     }
     #clases{
-        height: 210vmax;
+        height: 350vh;
+        line-height: 1.1;
     }
-    #footer .footer-title{
-     padding: 10px;
-    } */
+    #clases .text-block{
+        height: 350px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30%;
+    }
+    #clases .text-block .clases-text, #clases .text-block strong{
+        width: 380px;
+    }
+    #clases .text-block .clases-title{
+        font-size: 250%;
+    }
+    #clases .text-block .clases-sub{
+        font-size: 200%;
+    }
+    #clases .text-block strong{
+        font-size: 150%
+    }
+        #clases .text-block .clases-text{
+        font-size: 90%;
+    }
+    #footer{
+        height: 70vh;
+        padding: 0;
+        margin: 0;
+        
+    }
+    #footer .footer-back{
+        height:70vh;
+        background-size: 50px;
+    }
+   #footer .footer-ul{
+       flex-direction: column;
+   }
+   #footer .footer-ul img{
+       width: 11%;
+   }
+    
 }
 
-@media screen and (max-width:768px){
+@media screen and (min-width:426px) and (max-width:769px){
     #about .about-back .about-text {
         font-size: 100%;
     }
     #about .about-back .about-title{
         font-size: 190%;
     }
+    body .up-button-back{
+        height: 16%;
+    }
     #location .location-title{
-        top:280vh;
+        top:283vh;
     }
     #clases{
         height: 210vmax;
@@ -409,4 +466,30 @@ width:600px;
     #footer .footer-title{
      padding: 10px;
     }
+}
+@media screen and (min-width:769px){
+    .drop-down-menu.hidden{
+        display: flex;
+        justify-content: center;
+    }
+    .drop-down-menu.hidden nav .nav-ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100vw;
+        height: 15vh;
+    }
+    #nav-bar button{
+        display: none;
+    }
+    #nav-bar{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+
+.drop-down-menu.hidden:out-of-range {
+    display: none;
 }
