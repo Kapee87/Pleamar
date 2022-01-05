@@ -482,7 +482,6 @@ width:600px;
         
         width: 100vw;
         height: 18vh;
-        margin-top: 1px;
         font-size: 10px;
     }
     .drop-down-menu.hidden nav .nav-ul .li-nav a{
@@ -511,7 +510,7 @@ width:600px;
         height: 16vh;
     }
     #clases{
-        height: 120vmax;
+        height: 160vmax;
     }
     #clases .clases-back .text-block{
         height: 37vh;
