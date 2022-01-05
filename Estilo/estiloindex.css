@@ -244,9 +244,7 @@ body .up-button-back {
    
 }
 .location-title{
-
     width: 100%;
-    animation: mover 1s ease-in-out infinite;
     color:var(--main-color);
    font-family: 'Vujahday Script', cursive;
    font-size: 2.8rem;
@@ -471,6 +469,7 @@ width:600px;
     }
     #location .location-title{
         top:283vh;
+        animation: mover 1s ease-in-out infinite;
     }
     #clases{
         height: 240vmax;
