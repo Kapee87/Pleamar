@@ -7,3 +7,8 @@ hamburger.addEventListener("click", function () {
     hamburger.classList.toggle("is-active");
     menu.classList.toggle('show');
 });
+
+menu.addEventListener("click", function () {
+    menu.classList.toggle('show');
+    hamburger.classList.toggle('is-active');
+});
