@@ -470,6 +470,7 @@ width:600px;
     #location .location-title{
         top:283vh;
         animation: mover 1s ease-in-out infinite;
+        
     }
     #clases{
         height: 240vmax;
@@ -519,6 +520,8 @@ width:600px;
     }
     #location .location-title{
         top:282vh;
+        animation: mover 1s ease-in-out infinite;
+        
     }
     body .up-button-back{
         height: 16vh;
@@ -587,6 +590,8 @@ width:600px;
     #location .location-title{
         top:282vh;
         font-size: 4rem;
+        animation: mover 1s ease-in-out infinite;
+        
     }
     body .up-button-back{
         height: 16vh;
