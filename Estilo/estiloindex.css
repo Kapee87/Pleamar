@@ -114,9 +114,9 @@ body header .show {
         text-shadow: 1px 1px 5px #fff;
     }
 
-    header .drop-down-menu nav .nav-ul .li-nav a:hover{
-        /* animation: rotar 2s ease alternate; */
-    }
+    /* header .drop-down-menu nav .nav-ul .li-nav a:hover{
+        animation: rotar 2s ease alternate;
+    } */
     header .drop-down-menu nav .nav-ul .li-nav img{
         width: 40px;
         height: 60px;
@@ -177,8 +177,8 @@ body header .show {
      font-size: 2.8rem;
     text-align: right;
     padding: 60px 20px 60px 0px;
-    color: rgba(0, 0, 0, 0.5);
-    text-shadow: 5px -10px 1px rgb(25, 119, 226);
+    color: rgba(1, 118, 228, 0.87);
+    text-shadow: 0px 0px 10px rgba(137, 203, 219, 0.89) ;
     font-family: 'Vujahday Script', cursive;
 }
 
@@ -186,7 +186,7 @@ body header .show {
 #about{
      box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.589);
      width: 100%;
-    height: 120vh;
+    height: 140vh;
     background-image: url(../imagenes/kids.jpg);
     background-position: center;
     background-size: cover;
@@ -205,15 +205,14 @@ body header .show {
     font-size: 4rem;
     font-weight: 800;
     color:rgb(0, 0, 0);
-    text-shadow: 3px -3px 4px rgb(153, 247, 242);
+    text-shadow: 3px -3px 10px rgb(153, 247, 242);
     font-family: 'Vujahday Script', cursive;
-    line-height: 0.5;
 }
 #about .about-back .about-text{
     font-size: 1.4rem;
     font-weight: 600;
     color:rgb(0, 0, 0);
-    text-shadow: 1px -1px 5px rgb(153, 247, 242);
+    text-shadow: 1px -1px 15px rgb(153, 247, 242);
     text-align: center;
     padding: 0px 40px;
 }
@@ -236,31 +235,35 @@ body .up-button {
     top:90vh;
     opacity: 0.7; 
     z-index: 100;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 
 }
 body .up-button-back {
-    background-color: #000;
+ position: absolute;
+    background-color: red;
+   
+}
+.location-title{
+
+    width: 100%;
+    animation: mover 1s ease-in-out infinite;
+    color:var(--main-color);
+   font-family: 'Vujahday Script', cursive;
+   font-size: 2.8rem;
+}
+.location-title-back{
+     background-color: #000;
     width: 100%;
     padding-right: 20px;
+    margin-top: -80px;
     height: 14%;
     min-height: 75px;
-    position: absolute;
+    /* position: absolute; */
    background-image: url(../imagenes/vanfond-removebg-preview.png);
    background-position: right;
    background-size: contain;
    background-repeat:no-repeat;
    animation: van-move 5s ease-in-out alternate-reverse infinite;
-   
-}
-.location-title{
-    position:absolute;
-    top:260vh;
-    width: 100%;
-    animation: mover 1s ease-in-out alternate infinite;
-    color:var(--main-color);
-   font-family: 'Vujahday Script', cursive;
-   font-size: 2.8rem;
 }
 /* Seccion clases */
 #clases{
@@ -290,19 +293,19 @@ body .up-button-back {
 }
 #clases .text-block .clases-title{
     font-size: 4rem;
-    animation: moverB 5s ease-out alternate infinite;
+    /* animation: moverB 5s ease-out alternate infinite; */
     text-shadow: 1px -1px 5px rgb(153, 247, 242);
     font-family: 'Vujahday Script', cursive;
 }
 #clases .text-block .clases-sub{
     font-size: 3.1rem;
-    animation: moverB 5s ease-out alternate infinite;
+    /* animation: moverB 5s ease-out alternate infinite; */
     text-shadow: 1px -1px 5px rgb(153, 247, 242);
     font-family: 'Vujahday Script', cursive;
 }
 #clases .text-block strong{
     font-size: 2rem;
-    animation: moverB 5s ease-out alternate infinite;
+    /* animation: moverB 5s ease-out alternate infinite; */
 text-shadow: 1px -1px 5px rgb(153, 247, 242);
 width:600px;
 
@@ -335,7 +338,7 @@ width:600px;
     color:var(--main-color);
     text-shadow: 1px 1px 10px #fff;
     padding: 30px 0px;
-    animation: moverB 2s ease-in-out alternate-reverse infinite;
+    /* animation: moverB 2s ease-in-out alternate-reverse infinite; */
 }
 #footer .footer-ul{
     text-align: right;
@@ -386,8 +389,7 @@ width:600px;
     }
     #main .main-text{
         font-size: 180%;
-        animation: mover 5s  alternate-reverse infinite;
-        /* Puede quitarse la animación anterior para promover mejor lectura */
+        
     }
      #about .about-back .about-text {
         font-size: 68%;
@@ -396,6 +398,7 @@ width:600px;
     #about .about-back .about-title{
         font-size: 200%;
         line-height: 0;
+        margin-bottom: -20px;
     }
     body .up-button-back{
         height: 19%;
@@ -453,6 +456,7 @@ width:600px;
     }
     #about .about-back .about-title{
         font-size: 190%;
+        margin-bottom: -20px;
     }
     body .up-button-back{
         height: 16%;
@@ -467,18 +471,25 @@ width:600px;
      padding: 10px;
     }
 }
-@media screen and (min-width:769px){
+@media screen and (min-width:769px) and (max-width:1700px){
     .drop-down-menu.hidden{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
     }
     .drop-down-menu.hidden nav .nav-ul{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        
         width: 100vw;
-        height: 15vh;
+        height: 18vh;
+        margin-top: 1px;
+        font-size: 10px;
     }
+    .drop-down-menu.hidden nav .nav-ul .li-nav a{
+        
+        float: center;
+    }
+    
     #nav-bar button{
         display: none;
     }
@@ -486,10 +497,38 @@ width:600px;
         display: flex;
         justify-content: center;
     }
-    
-}
-
-
-.drop-down-menu.hidden:out-of-range {
-    display: none;
+    #about .about-back .about-title{
+       font-size: 220%;
+       margin-bottom: -20px; 
+    }
+    #about .about-back .about-text{
+        font-size: 95%;
+    }
+    #location .location-title{
+        top:282vh;
+    }
+    body .up-button-back{
+        height: 16vh;
+    }
+    #clases{
+        height: 120vmax;
+    }
+    #clases .clases-back .text-block{
+        height: 37vh;
+    }
+    #clases .clases-back .text-block .clases-title{
+        font-size: 300%;
+    }
+    #clases .clases-back .text-block .clases-sub{
+     font-size: 280%;   
+    }
+    #clases .clases-back .text-block .clases-text{
+        font-size:90%;
+    }
+    #clases .clases-back .text-block strong{
+        font-size: 150%;
+    }
+     #footer .footer-title{
+     padding: 10px;
+    }
 }
