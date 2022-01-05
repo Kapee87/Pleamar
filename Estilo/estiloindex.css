@@ -55,13 +55,7 @@ h2{
     0%{background-position: right;}
     100%{background-position: left;}
 }
-@keyframes van-rotar{
-0%{background-position: bottom; background-size: 50px;}
-25%{background-position: right;background-size:100px ;}
-50%{background-position: top;background-size: 200px}
-75%{background-position: left;background-size: 100px}
-100%{background-position: bottom;background-size: 50px}
-}
+
 @keyframes aparecer{
     0%{opacity: 0.2;}
     100%{opacity: 1;}
@@ -415,9 +409,7 @@ width:600px;
     #location .location-title{
         top:280vh;
     }
-    #location .location-title-back{
-        animation: van-rotar 2s alternate infinite;
-    }
+    
     #clases{
         height: 350vh;
         line-height: 1.1;
