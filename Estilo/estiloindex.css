@@ -60,7 +60,10 @@ h2{
     0%{opacity: 0.2;}
     100%{opacity: 1;}
 }
-
+@keyframes correr{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
 /* Barra de navegacion superior */
 body header #nav-bar{
     display: flex;
@@ -142,6 +145,8 @@ body header .show {
      }
   
 
+    .flechi-container{
+display: none;    }
 /* Seccion Welcome */
 .welcome .welcome-fondo{
  width: 100%;
@@ -258,10 +263,10 @@ body .up-button-back {
     min-height: 75px;
     /* position: absolute; */
    background-image: url(../imagenes/vanfond-removebg-preview.png);
-   background-position: right;
-   background-size: contain;
+   background-position: center;
+   background-size: 490px 190px;
    background-repeat:no-repeat;
-   animation: van-move 5s ease-in-out alternate-reverse infinite;
+   
 }
 /* Seccion clases */
 #clases{
@@ -286,7 +291,7 @@ body .up-button-back {
     flex-direction: column;
     align-items: center;
     line-height: -5;
-    background-color:rgba(34, 153, 245, 0.356);
+    background-color:rgba(247, 247, 247, 0.356);
     border-radius: 50%;
 }
 #clases .text-block .clases-title{
@@ -328,6 +333,9 @@ width:600px;
     background-color: rgb(0, 0, 0);
     box-shadow: 1px -3px 5px rgb(3, 92, 65);
    animation: van-move 10s alternate-reverse infinite;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 #footer .footer-title{
    text-align: center;
@@ -363,8 +371,17 @@ width:600px;
 #footer .footer-ul a:hover{
     animation: mover 0.2s ease-in-out infinite;
 }
+#footer .footer-back p{
+    color:#fff;
+    margin-top: 20px;
+    font-size: 60%;
+    font-family:fantasy;
+}
 
-
+#footer .footer-back p a{
+    text-decoration: none;
+    color:springgreen;
+}
 /* Responsive */
 
 @media screen and (max-width:426px) {
@@ -456,12 +473,12 @@ width:600px;
     
 }
 
-@media screen and (min-width:426px) and (max-width:754px){
+@media screen and (min-width:426px) and (max-width:768px){
     #about .about-back .about-text {
-        font-size: 100%;
+        font-size: 80%;
     }
     #about .about-back .about-title{
-        font-size: 190%;
+        font-size: 200%;
         margin-bottom: -20px;
     }
     body .up-button-back{
@@ -469,54 +486,39 @@ width:600px;
     }
     #location .location-title{
         top:283vh;
-        animation: mover 1s ease-in-out infinite;
-        
-    }
+        }
     #clases{
-        height: 240vmax;
+        height: 150vmax;
     }
     #footer .footer-title{
      padding: 10px;
     }
 }
-
-
-@media screen and (min-width:769px) and (max-width:1700px){
-    .drop-down-menu.hidden{
-        display: flex;
-        justify-content: space-around;
-        opacity: 0.2;
+@media screen and (min-width:520px){
+    #location .location-title-back{
+        animation: van-move 5s alternate-reverse infinite;
+        background-size: contain;
     }
-    .drop-down-menu:hover{
-        animation: aparecer 1s ease-in;
-        opacity: 1;
-    }
-
-    .drop-down-menu.hidden nav .nav-ul{
-        display: flex;
-        flex-direction: row;
-        width: 100vw;
-        height: 10vh;
-        font-size: 10px;
-    }
-    .drop-down-menu.hidden nav .nav-ul .li-nav a{
-        
-        float: center;
+    #location .location-title{
+        animation: mover 3s infinite;
     }
     
-    #nav-bar button{
-        display: none;
-    }
-    #nav-bar{
-        display: flex;
-        justify-content: center;
-    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:1700px){
+   
+   .flechi-container{
+       display: none;
+   }
+   
+   
     #about .about-back .about-title{
        font-size: 220%;
-       margin-bottom: -20px; 
+       margin-bottom: -50px; 
     }
     #about .about-back .about-text{
-        font-size: 155%;
+        font-size: 95%;
     }
     #location .location-title{
         top:282vh;
@@ -551,6 +553,8 @@ width:600px;
 @media (min-width:1700px){
     .drop-down-menu.hidden{
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         opacity: 0.2;
         
@@ -559,6 +563,30 @@ width:600px;
         animation: aparecer 1s ease-in;
         opacity: 1;
     }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        .flechibus{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: 4%;
+        height: 20%;
+        transform: rotate(180deg);
+        opacity: 0.9;
+        animation: correr 1s ease alternate infinite;
+    }
+    .flechi-container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 20vh;
+        position: absolute;
+        top:20vh;
+    }
+    
 
     .drop-down-menu.hidden nav .nav-ul{
         display: flex;
@@ -591,13 +619,12 @@ width:600px;
         top:282vh;
         font-size: 4rem;
         animation: mover 1s ease-in-out infinite;
-        
     }
     body .up-button-back{
         height: 16vh;
     }
     #clases{
-        height: 100vmax;
+        height: 95vmax;
     }
     #clases .clases-back .text-block{
         height: 37vh;
